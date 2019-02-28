@@ -1,4 +1,6 @@
-public class Video {
+import java.awt.*;
+
+public class Video implements java.io.Serializable {
     private String title;
     private String director;
     private String[] hovedSkuespiller;
@@ -6,12 +8,13 @@ public class Video {
     private int release;
     private String[] genre;
     private String[] keywords;
+    private Image cover;
 
 
 
     private int rating;
 
-    public Video(String title,String director, String [] hovedSkuespiller, int varighed, int release, String [] genre, String[] keywords){
+    public Video(String title,String director, String [] hovedSkuespiller, int varighed, int release, String [] genre, String[] keywords, Image cover){
         this.title=title;
         this.director=director;
         this.hovedSkuespiller=hovedSkuespiller;
@@ -19,6 +22,7 @@ public class Video {
         this.release=release;
         this.genre=genre;
         this.keywords=keywords;
+        this.cover=cover;
 
     }
 
@@ -58,4 +62,7 @@ public class Video {
         return keywords;
     }
 
+    public Image getCover() {
+        return cover;
+    }
 }
