@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.awt.*;
 
 public class Video implements java.io.Serializable {
@@ -8,13 +9,14 @@ public class Video implements java.io.Serializable {
     private int release;
     private String[] genre;
     private String[] keywords;
-    private Image cover;
+    //private ImageIcon cover;
+    private boolean rated =false;
 
 
 
     private int rating;
 
-    public Video(String title,String director, String [] hovedSkuespiller, int varighed, int release, String [] genre, String[] keywords, Image cover){
+    public Video(String title,String director, String [] hovedSkuespiller, int varighed, int release, String [] genre, String[] keywords/*, ImageIcon cover*/){
         this.title=title;
         this.director=director;
         this.hovedSkuespiller=hovedSkuespiller;
@@ -22,7 +24,7 @@ public class Video implements java.io.Serializable {
         this.release=release;
         this.genre=genre;
         this.keywords=keywords;
-        this.cover=cover;
+        //this.cover=cover;
 
     }
 
@@ -62,7 +64,15 @@ public class Video implements java.io.Serializable {
         return keywords;
     }
 
-    public Image getCover() {
+    /*public ImageIcon getCover() {
         return cover;
+    }*/
+
+    public boolean isRated() {
+        return rated;
+    }
+
+    public void setRated(boolean rated) {
+        this.rated = rated;
     }
 }

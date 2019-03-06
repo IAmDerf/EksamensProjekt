@@ -7,7 +7,7 @@ public class GUI {
         GUIPanel panel = new GUIPanel();
         frame.add(panel);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setSize(700,1000);
+        frame.setSize(1500,1000);
         frame.setVisible(true);
     }
 }

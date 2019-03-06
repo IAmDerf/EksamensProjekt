@@ -7,8 +7,8 @@ public class Data {
     private static final File VIDEOINFO = new File("videoinfo.ser");
 
     public static void setUpVideos(){
-        if(true) {
-            videos = DataGetter.getAllVideosOnPage(1, 1);
+        if(!VIDEOINFO.exists()) {
+            videos = DataGetter.getAllVideosOnPage(1, 200);
             Serializer.serialize(videos, "videoinfo.ser");
         } else{
             try {
